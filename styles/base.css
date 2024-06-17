@@ -77,9 +77,25 @@ main .card h2 {
     margin-top: 0;
 }
 
-/* Ensure cards are side by side on larger screens */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
-    }
+/* Footer styles */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer p:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:first-child span {
+    margin-right: 0.5em;
 }

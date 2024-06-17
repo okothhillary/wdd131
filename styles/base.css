@@ -99,3 +99,6 @@ footer p:first-child {
 footer p:first-child span {
     margin-right: 0.5em;
 }
+
+/* Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');

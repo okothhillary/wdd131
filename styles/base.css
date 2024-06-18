@@ -103,3 +103,13 @@ footer p:first-child {
 footer p:first-child span {
     margin-right: 0.5em;
 }
+
+footer p:second-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:second-child span {
+    margin-right: 1.0em;
+}

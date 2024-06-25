@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 1em;
+}

@@ -22,6 +22,8 @@ header {
 
 header h1 {
     margin: 0;
+    flex: 1; /* Allow the title to take up available space */
+    text-align: left;
 }
 
 #hamburger {
@@ -71,8 +73,9 @@ nav ul li a:hover {
 
 main {
     flex: 1;
-    padding-top: 70px; /* to offset the fixed header */
+    padding-top: 70px; 
     padding: 20px;
+    padding-bottom: 70px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
@@ -80,7 +83,15 @@ main {
 
 figure {
     margin: 0;
+    padding: 10px; 
     text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; 
+    height: 150px; 
 }
 
 footer {

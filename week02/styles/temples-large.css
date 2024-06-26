@@ -1,18 +1,47 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-}
+/* styles/temples-large.css */
+@media (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
 
-header h1 {
-    font-size: 2em;
-}
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 1;
+    }
 
-nav ul {
-    justify-content: flex-end;
-}
+    nav ul li {
+        margin-left: 20px;
+    }
 
-nav ul li {
-    margin: 0 1em;
+    main {
+        padding-top: 70px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        margin: 0;
+        order: 1;
+        flex: 1;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }

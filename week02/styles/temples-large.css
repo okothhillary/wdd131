@@ -32,7 +32,7 @@
     main {
         padding-top: 70px;
         padding: 20px;
-        padding-bottom: 70px; /* to add space between last row and footer */
+        padding-bottom: 70px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;

@@ -23,6 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("windchill").textContent = windChill; // Update the wind chill in the HTML
     }
 
-    // Run the function to display wind chill when the page loads
     displayWindChill();
 });

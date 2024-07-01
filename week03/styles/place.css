@@ -62,7 +62,7 @@
 }
 
   .weather-heading {
-    text-align: center; /* Center the heading */
+    text-align: center; 
 }
 
 .weather-heading::after {

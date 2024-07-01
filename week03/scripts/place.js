@@ -8,19 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const temperature = 9; // in degrees Celsius
     const windSpeed = 5; // in km/h
 
-    // Function to calculate wind chill factor
     function calculateWindChill(temp, windSpeed) {
         // Wind chill formula in Celsius
         return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
     }
 
-    // Function to display wind chill factor
     function displayWindChill() {
         let windChill = "N/A"; // Default value
         if (temperature <= 10 && windSpeed > 4.8) { // Check if conditions are met for wind chill calculation
             windChill = calculateWindChill(temperature, windSpeed).toFixed(2) + " °C"; // Calculate and format the wind chill
         }
-        document.getElementById("windchill").textContent = windChill; // Update the wind chill in the HTML
+        document.getElementById("windchill").textContent = windChill; 
     }
 
     displayWindChill();

@@ -1,0 +1,73 @@
+/* Global styles */
+:root {
+	--primary-color: #000; /* Black */
+	--secondary-color: #FFF; /* White */
+	--accent-color: #FF0000; /* Red */
+	--background-color: #F0F0F0; /* Light gray */
+	--font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+	font-family: var(--font-family);
+	background-color: var(--background-color);
+	color: var(--primary-color);
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+  }
+  
+  header {
+	background-color: var(--accent-color);
+	color: var(--secondary-color);
+	padding: 20px;
+  }
+  
+  main {
+	padding: 20px;
+  }
+  
+  section {
+	margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+	font-weight: bold;
+  }
+  
+  h2 {
+	color: var(--accent-color);
+  }
+  
+  dl {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 10px;
+  }
+  
+  dl dt {
+	font-weight: bold;
+  }
+  
+  footer {
+	background-color: var(--accent-color);
+	color: var(--secondary-color);
+	padding: 10px;
+	text-align: center;
+  }
+  
+  /* Media query for large screens */
+  @media (min-width: 800px) {
+	body {
+	  font-size: 18px;
+	}
+  }
+  
+  /* Pseudo-element for weather icon */
+  .weather-heading::after {
+	content: url('images/weather-emoticon.png');
+	display: inline-block;
+	margin-left: 10px;
+	width: 30px; /* Adjust size as needed */
+	height: 30px;
+  }
+  

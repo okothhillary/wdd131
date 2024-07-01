@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Magical Kenya</title>
+	<meta name="description" content="Empty for now.">
+	<meta name="author" content="Hillary Okoth">
+	<link rel="preconnect" href="https://fonts.googleapis.com">    
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="styles/place.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<script src="scripts/place.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>Welcome to Magical Kenya</h1>
+	</header>
+	<main>
+		<section>
+			<picture>
+				<source srcset="images/kenya-large.webp" media="(min-width: 800px)">
+				<source srcset="images/kenya-medium.webp" media="(min-width: 500px)">
+				<img src="images/kenya-small.webp" alt="Beautiful landscape of Kenya" style="width:100%;">
+			</picture>
+		</section>
+		<section>
+			<h2>Data</h2>
+			<dl>
+				<dt>Area:</dt>
+				<dd>580,367 km²</dd>
+				<dt>Population:</dt>
+				<dd>53 million</dd>
+				<dt>Capital:</dt>
+				<dd>Nairobi</dd>
+				<dt>Languages:</dt>
+				<dd>Swahili, English</dd>
+				<dt>Currency:</dt>
+				<dd>Kenyan Shilling (KES)</dd>
+				<dt>Timezone:</dt>
+				<dd>East Africa Time (EAT)</dd>
+				<dt>Calling Code:</dt>
+				<dd>+254</dd>
+				<dt>Internet TLD:</dt>
+				<dd>.ke</dd>
+			</dl>
+		</section>
+		<section>
+			<h2>Weather</h2>
+			<img src="images/weather-icon.svg" alt="Weather Emoticon" style="width:50px;">
+			<dl>
+				<dt>Temperature:</dt>
+				<dd>25°C</dd>
+				<dt>Conditions:</dt>
+				<dd>Sunny</dd>
+				<dt>Wind:</dt>
+				<dd>15 km/h</dd>
+				<dt>Windchill:</dt>
+				<dd id="windchill"></dd>
+			</dl>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; <span id="currentyear"></span> Hillary, Nairobi, Kenya</p>
+		<p id="lastModified"></p>
+	</footer>
+	
+</body>
+</html>

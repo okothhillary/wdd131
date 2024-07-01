@@ -1,8 +1,7 @@
-/* Global styles */
 :root {
-	--primary-color: #000; /* Black */
-	--secondary-color: #FFF; /* White */
-	--accent-color: #FF0000; /* Red */
+	--primary-color: #000; 
+	--secondary-color: #FFF; 
+	--accent-color: #FF0000;
 	--background-color: #F0F0F0; /* Light gray */
 	--font-family: 'Roboto', sans-serif;
   }
@@ -32,6 +31,7 @@
   
   h1, h2 {
 	font-weight: bold;
+	text-align: center;
   }
   
   h2 {
@@ -47,6 +47,34 @@
   dl dt {
 	font-weight: bold;
   }
+
+  section {
+    width: 80%; 
+    margin: 0 auto;
+    text-align: center; 
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+
+  .weather-heading {
+    text-align: center; /* Center the heading */
+}
+
+.weather-heading::after {
+    content: ''; 
+    display: block;
+    margin: 0 auto; 
+    width: 50px; 
+    height: 50px; 
+    background-image: url('images/weather-emoticon.png'); 
+    background-size: cover;
+}
+
+ 
   
   footer {
 	background-color: var(--accent-color);
@@ -67,7 +95,7 @@
 	content: url('images/weather-emoticon.png');
 	display: inline-block;
 	margin-left: 10px;
-	width: 30px; /* Adjust size as needed */
+	width: 30px; 
 	height: 30px;
   }
   

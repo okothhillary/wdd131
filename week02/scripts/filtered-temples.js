@@ -70,14 +70,34 @@ document.addEventListener('DOMContentLoaded', function () {
             dedicated: "1983, December, 2",
             area: 116642,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-        }
-        // Add more temple objects here...
+        },
+        {
+            templeName: "Albuquerque Mexico",
+            location: "New Mexico, Mexico",
+            dedicated: "1994, April, 2",
+            area: 816642,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-998219-wallpaper.jpg"
+        },
+        {
+            templeName: "Bern Switzerland",
+            location: "Bern, Switzerland",
+            dedicated: "2004, October, 12",
+            area: 96642,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-lds-653038-wallpaper.jpg"
+        },
+        {
+            templeName: "Bountiful Utah",
+            location: "Utah, USA",
+            dedicated: "2001, August, 22",
+            area: 78642,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/400x250/bountiful-temple-lds-1059079-wallpaper.jpg"
+        },
     ];
 
     // Function to display temples based on filter
     function displayTemples(filteredTemples) {
         const templeContainer = document.getElementById('main');
-        templeContainer.innerHTML = ''; // Clear previous content
+        templeContainer.innerHTML = ''; 
 
         filteredTemples.forEach(temple => {
             const card = document.createElement('div');
@@ -100,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Filter functions
     const filterFunctions = {
-        all: () => temples,
+        home: () => temples,
         old: () => temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900),
         new: () => temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000),
         large: () => temples.filter(temple => temple.area > 90000),
@@ -112,11 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            const filter = link.getAttribute('href').substring(1); // Get filter from href attribute
+            const filter = link.getAttribute('href').substring(1);
             if (filter === 'home') {
-                displayTemples(temples); // Display all temples for "Home"
+                displayTemples(temples); 
             } else {
-                displayTemples(filterFunctions[filter]()); // Display filtered temples based on other links
+                displayTemples(filterFunctions[filter]());
             }
         });
     });

@@ -1,0 +1,50 @@
+/* styles/temples-large.css */
+@media (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 1;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding-top: 70px;
+        padding: 20px;
+        padding-bottom: 70px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        margin: 0;
+        flex: 1;
+        text-align: left;
+    }
+}

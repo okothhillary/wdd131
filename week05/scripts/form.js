@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Products array for populating product options
     const products = [
         {
             id: 'fc-1888',
@@ -27,33 +28,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const productSelect = document.getElementById('productName');
+    // Function to populate product options
+    const populateProductOptions = () => {
+        const productSelect = document.getElementById('productName');
+        products.forEach(product => {
+            const option = document.createElement('option');
+            option.value = product.id;
+            option.textContent = product.name;
+            productSelect.appendChild(option);
+        });
+    };
 
-    // Populate product options
-    products.forEach(product => {
-        const option = document.createElement('option');
-        option.value = product.id;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
-    });
+    // Populate product options on form.html and review.html
+    populateProductOptions();
 
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-    document.getElementById('currentyear').innerHTML = currentYear;
+    // Function to update the footer with current year and last modified date
+    const updateFooter = () => {
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+    };
 
-    // Get the last modified date
-    const lastModified = document.lastModified;
-    document.getElementById('lastModified').innerHTML = `Last Modified: ${lastModified}`;
+    // Update footer on form.html and review.html
+    updateFooter();
 
+    // Track number of reviews completed using localStorage
+    const reviewForm = document.querySelector('form');
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', () => {
+            let reviewsCompleted = localStorage.getItem('reviewsCompleted');
+            reviewsCompleted = reviewsCompleted ? parseInt(reviewsCompleted) + 1 : 1;
+            localStorage.setItem('reviewsCompleted', reviewsCompleted);
+        });
+    }
 });
 
-// Track number of reviews completed using localStorage
-const reviewForm = document.querySelector('form');
-if (reviewForm) {
-    reviewForm.addEventListener('submit', () => {
-        let reviewsCompleted = localStorage.getItem('reviewsCompleted');
-        reviewsCompleted = reviewsCompleted ? parseInt(reviewsCompleted) + 1 : 1;
-        localStorage.setItem('reviewsCompleted', reviewsCompleted);
-    });
-}
+// Display number of reviews completed on review.html
+document.addEventListener('DOMContentLoaded', () => {
+    const reviewsCompleted = localStorage.getItem('reviewsCompleted') || 0;
+    const reviewsCompletedElement = document.getElementById('reviewsCompleted');
+    if (reviewsCompletedElement) {
+        reviewsCompletedElement.textContent = reviewsCompleted;
+    }
 
+    // Update current year in the footer
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+});

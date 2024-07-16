@@ -34,7 +34,7 @@ footer {
     width: 100%;
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
     main {
         padding: 1em;

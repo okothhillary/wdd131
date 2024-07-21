@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dry Oar Boating</title>
-        <link rel="stylesheet" href=styles/styles.css>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Hillary Okoth</title>
+    <meta name="description" content="White Water Rafting Booking Site.">
+    <meta name="author" content="Hillary Okoth">
+    <link rel ="preconnect" href="https://fonts.googleapis.com">    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel ="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/rafting.js" defer></script>
+</head>
 
     <body>
 
@@ -16,26 +19,26 @@
 
             <header>
                 <a id="logo_link" href="index.html">
-                    <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
+                    <img class="logo" src="images/logo.svg" alt="Dry Oar Logo" loading="lazy">
                 </a>
                 <nav>
                     <a href="index.html">Home</a>
                     <a href="trips.html" target="_blank">Trips and Dates</a>
-                    <a href="site-plan-rafting.html">Site Plan</a>
-                    <a href="contactus.html" target="_blank">Contact Us</a>
+                    <a href="site-plan-rafting.html" target="_blank">Site Plan</a>
+                    <a href="book.html" target="_blank">Book Now</a>
                 </nav>
             </header>
 
             <div id="hero">
                 
                 <div id="hero-box">
-                    <img id="hero-img" src="images/hero.png" alt="People enjoying white water rafting">
+                    <img id="hero-img" src="images/hero.webp" alt="People enjoying white water rafting">
                 </div>
                 <section id="hero-msg">
                     <h1 class="home-title">Have An Adventure</h1>
                     <h4>Make Memories with Dry Oar</h4>
                     <div class="button-box">
-                        <a class="book" href="rates.html">Book Now</a>
+                        <a class="book" href="book.html" target="_blank">Book Now</a>
                     </div>
                 </section>
             </div>
@@ -43,49 +46,52 @@
             <main class="home-grid">
 
                 <section class="rivers-card">
-                    <img class="card-img" src="images/rivers.jpg" alt="river in forest">
-                    <img class="icon" src="images/river_icon.png" alt="river icon">
+                    <img class="card-img" src="images/rivers.webp" alt="river in forest">
+                    <img class="icon" src="images/river_icon.svg" alt="river icon">
                     <h2>Rivers</h2>
                 </section>
 
                 <section class="camping-card">
-                    <img class="card-img" src="images/camping.jpg" alt="tent in mountains">
-                    <img class="icon" src="images/fire_icon.png" alt="fire icon">
+                    <img class="card-img" src="images/camping.webp" alt="tent in mountains">
+                    <img class="icon" src="images/fire_icon.svg" alt="fire icon">
                     <h2>Camping</h2>
                 </section>
 
                 <section class="rapids-card">
-                    <img class="card-img" src="images/rapids.jpg" alt="rafting boat">
-                    <img class="icon" src="images/oars.png" alt="oars icon">
+                    <img class="card-img" src="images/rapids.webp" alt="rafting boat">
+                    <img class="icon" src="images/oars.svg" alt="oars icon">
                     <h2>Rapids</h2>
                 </section>
 
                 <div id="background"></div>
 
-                <img class="mountains" src="images/mountains.jpg" alt="Misty mountains">
+                <img class="mountains" src="images/mountains.webp" alt="Misty mountains">
                 
                 <section class="msg">
                     <h2 id="wow">Discover nature</h2>
                     <p id="epic">epic! </p>
-                    <a class='join' href="rivers.html">Join Us</a>
+                    <a class='join' href="book.html">Join Us</a>
                 </section>
                 
             </main>
 
-            <footer>
-                <h3>Dry Oar © 2022 - Hillary Okoth</h3>
+            <footer>                
                 <h3><a href="site-plan-rafting.html">Site Plan</a></h3>
-                <h3><a href="contactus.html">Contact Us</a></h3>
+                <h3><a href="book.html">Contact Us</a></h3>
                 <div class="social">
                     <a href="https://facebook.com" target="_blank">
-                        <img src="images/facebook.png" alt="fb icon">
+                        <img src="images/facebook.svg" alt="fb icon">
                     </a>
                     <a href="https://twitter.com" target="_blank">
-                        <img src="images/twitter.png" alt="twitter icon">
+                        <img src="images/twitter.svg" alt="twitter icon">
                     </a>
                     <a href="https://instagram.com" target="_blank">
-                        <img src="images/instagram.png" alt="instagram icon">
+                        <img src="images/instagram.svg" alt="instagram icon">
                     </a>
+
+                    <p>&copy; <span id="currentyear"></span> Hillary, Nairobi, Kenya</p>
+                    <p id="lastModified"></p>
+
                 </div>
             </footer>
         </div>   
